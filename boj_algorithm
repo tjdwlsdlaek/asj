@@ -1,0 +1,19 @@
+import sys
+n=int(sys.stdin.readline())
+num=[]
+for i in range(n):
+    num.append(int(input()))
+num.sort(reverse=True)
+a=1
+weight_max=num[0]
+for i in num:
+    weight=i*a
+    a=a+1
+    weight_max=max(weight_max,weight)
+
+print(weight_max)
+
+// 백준 그리디알고리즘 로프
+// 내림차순으로 정렬해야 함
+// 하나 이상 사용하므로 모든 경우를 따지려 했으나 시간초과
+// 가장 큰 값을 처음부터 사용하면 나중에 따로 안구해도 되므로 정렬해야함
